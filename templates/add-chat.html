@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block head %}
+{{super()}}
+<link rel="stylesheet" href="../static/css/add-chat.css">
+{% endblock %}
+{% block content %}
+    <nav class="messengerNav">
+        <ul>
+            <li><a href="/"><img src="../static/img/chats.png"/>Chats</a></li>
+            <li><a href="/global"><img src="../static/img/global.png"/>Global</a></li>
+            <li><a href="/profile"><img src="../static/img/profile.png"/>Profile</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h1>Add Chat</h1>
+        <div>
+            <div>
+                <label for="chatId">User Id:</label>
+                <input id="chatId" type="number"/>
+            </div>
+            <p id="errorP">{{error}}</p>
+            <button id="chatIdButton">Add Chat</button>
+        </div>
+    </section>
+<script src="../static/js/addChat.js"></script>
+{% endblock %}

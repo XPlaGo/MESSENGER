@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block head %}
+{{super()}}
+<link rel="stylesheet" href="../static/css/profile-style.css">
+{% endblock %}
+{% block content %}
+    <nav class="messengerNav">
+        <ul>
+            <li><a href="/"><img src="../static/img/chats.png"/>Chats</a></li>
+            <li><a href="/global"><img src="../static/img/global.png"/>Global</a></li>
+            <li class="active"><a href="/profile"><img src="../static/img/profile.png"/>Profile</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h1>Profile</h1>
+        <div class="info-wrapper">
+            <div class="imageBox" id="imageBox"></div>
+            <div class="info-block" id="infoBlock">
+            </div>
+        </div>
+    </section>
+<script src="../static/js/profile.js"></script>
+{% endblock %}

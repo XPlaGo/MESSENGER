@@ -1,0 +1,138 @@
+* {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500 !important;
+  color: #bbb !important;
+  scrollbar-width: 0.5em;
+}
+*::-webkit-scrollbar {
+  position: absolute;
+  width: 0.5em;
+  background: transparent;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+  border: none;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.05);
+  outline: none;
+  border: none;
+  border-radius: 6px;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "header" "main";
+  background: #111;
+  height: 100vh;
+}
+
+header {
+  grid-area: header;
+  background: #1e1e1e;
+}
+header h1 {
+  font-size: 200%;
+  font-weight: 600 !important;
+  color: #6F59B6 !important;
+}
+header div {
+  max-width: 1170px;
+  width: calc(100vw - 100px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .header-sign-block {
+  display: flex;
+}
+header .header-sign-block a {
+  text-decoration: none;
+  font-weight: 700 !important;
+  padding: 7px 10px;
+  border-radius: 10px;
+}
+header .header-sign-block .sign-in, header .header-sign-block .log-out {
+  margin: 0 10px;
+  background: #444;
+}
+header .header-sign-block .sign-up {
+  background: #6F59B6;
+  color: #fff !important;
+}
+
+.half-hidden {
+  margin: 20px auto;
+  opacity: 0.5;
+}
+
+main {
+  position: relative;
+  grid-area: main;
+  max-width: 1170px;
+  width: calc(100vw - 100px);
+  height: calc(100vh - 90px);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.messengerNav {
+  margin: auto 0;
+  grid-area: nav;
+}
+.messengerNav ul {
+  padding: 0;
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  list-style: none;
+}
+.messengerNav ul a {
+  text-decoration: none;
+  align-items: center;
+  padding: 0 10px 0 0;
+  font-size: 120%;
+  margin: 0;
+  display: flex;
+  color: #bbb;
+}
+.messengerNav ul li {
+  margin: 1px 0;
+  padding: 10px;
+  background: #1e1e1e;
+  border-bottom: none;
+  transition: 0.2s ease-in-out;
+}
+.messengerNav ul li.active {
+  background: #252525;
+}
+.messengerNav ul li.active a {
+  color: #8c78ca !important;
+  font-weight: 700 !important;
+}
+.messengerNav ul li:hover {
+  background: #333;
+}
+.messengerNav ul li:hover img {
+  transform: scale(1.2);
+}
+.messengerNav ul li:first-child {
+  border-radius: 10px 10px 0 0;
+}
+.messengerNav ul li:last-child {
+  border-radius: 0 0 10px 10px;
+}
+.messengerNav ul li img {
+  margin: 0 20px 0 0;
+  width: 30px;
+  transition: 0.2s ease-in-out;
+}
+
+/*# sourceMappingURL=base-style.css.map */

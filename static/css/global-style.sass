@@ -1,0 +1,163 @@
+main
+  position: relative
+  display: grid
+  grid-template-areas: "nav chatsBlock"
+  grid-template-columns: auto 1fr
+  grid-column-gap: 20px
+  height: calc(100vh - 90px)
+  grid-template-rows: 1fr
+
+  .globalSection
+    position: relative
+    grid-area: chatsBlock
+    display: flex
+    margin: 20px 0
+    width: 100%
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    max-height: calc(100% - 40px)
+    border-radius: 10px
+    box-sizing: border-box
+    overflow-y: scroll
+
+    .headerGlobal
+      position: sticky
+      box-sizing: border-box
+      top: 0
+      margin: 0
+      padding: 10px
+      grid-area: h2
+      align-items: center
+      display: flex
+      width: 100%
+      height: 60px
+      background: #111
+      z-index: 10
+
+      div
+        display: flex
+        align-items: center
+        margin: 0 10px 0 0
+        padding: 0 10px
+        height: 100%
+        background: #222
+        border-radius: 10px
+        white-space: nowrap
+
+        input
+          font-size: 100%
+          margin: auto 0
+          background: transparent
+          border: none
+          outline: none
+
+        img
+          margin-right: 10px
+          height: 25px
+
+      a
+        text-decoration: none
+        display: flex
+        align-items: center
+        margin: 0 0 0 10px
+        padding: 0 15px
+        background: #222
+        border-radius: 10px
+        height: 100%
+        white-space: nowrap
+
+      h2
+        margin: auto
+        justify-content: center
+        display: flex
+        width: 100%
+
+    .contentGlobal
+      width: 100%
+      grid-area: chats
+      display: flex
+      height: 100%
+      align-items: center
+      //overflow-y: scroll
+
+      ul
+        margin: 0
+        padding: 10px
+        display: flex
+        width: 100%
+        max-height: 100%
+        justify-content: flex-start
+        align-items: center
+        flex-direction: column
+        list-style: none
+        box-sizing: border-box
+
+        li
+          margin: 5px 0
+          display: grid
+          grid-template-areas: "image h3 button" "image last button"
+          grid-template-columns: auto 1fr auto
+          background: #222
+          transition: 0.2s ease-in-out
+          border-radius: 10px
+          width: 100%
+
+          &:hover
+            background: #333
+
+            p
+              color: #999999 !important
+
+            .imageBox
+              height: 50px
+              width: 50px
+
+          h3
+            margin: 10px 0 0 0
+            grid-area: h3
+
+          button
+            background: #6F59B6
+            margin: auto 10px
+            padding: 10px
+            border-radius: 5px
+            border: none
+            color: #fff !important
+            font-size: 100%
+            font-weight: 600 !important
+            grid-area: button
+            cursor: pointer
+
+          p
+            margin: 0 0 5px 0
+            grid-area: last
+            color: #555 !important
+            transition: 0.2s ease-in-out
+
+          .imageBox
+            height: 40px
+            width: 40px
+            position: relative
+            display: flex
+            grid-area: image
+            padding: 16px
+            justify-content: center
+            align-items: center
+            overflow: hidden
+            transition: all 0.2s ease-in-out
+
+            img
+              height: 100%
+              border-radius: 50%
+
+            span
+              display: flex
+              justify-content: center
+              align-items: center
+              width: 100%
+              height: 100%
+              background: #333
+              border-radius: 5px
+              font-size: 150%
+              color: #fff !important

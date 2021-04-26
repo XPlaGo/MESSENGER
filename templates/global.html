@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block head %}
+{{super()}}
+<link rel="stylesheet" href="../static/css/global-style.css">
+{% endblock %}
+{% block content %}
+    <nav class="messengerNav">
+        <ul>
+            <li><a href="/"><img src="../static/img/chats.png"/>Chats</a></li>
+            <li class="active"><a href="/global"><img src="../static/img/global.png"/>Global</a></li>
+            <li><a href="/profile"><img src="../static/img/profile.png"/>Profile</a></li>
+        </ul>
+    </nav>
+    <section class="globalSection">
+        <div class="headerGlobal">
+            <h2>Global</h2>
+            <div>
+                <img src="../static/img/search.png"/>
+                <input placeholder="Search" type="text" id="globalSearch"/>
+            </div>
+        </div>
+        <div class="contentGlobal">
+            <ul id="globalUl"></ul>
+        </div>
+    </section>
+<script src="../static/js/global.js"></script>
+{% endblock %}

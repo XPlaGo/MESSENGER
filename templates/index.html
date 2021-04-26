@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{super()}}
+<link rel="stylesheet" href="../static/css/index-style.css">
+{% endblock %}
+
+{% block content %}
+    <nav class="messengerNav">
+        <ul>
+            <li class="active"><a href="/"><img src="../static/img/chats.png"/>Chats</a></li>
+            <li><a href="/global"><img src="../static/img/global.png"/>Global</a></li>
+            <li><a href="/profile"><img src="../static/img/profile.png"/>Profile</a></li>
+        </ul>
+    </nav>
+    <section class="chatsSection" id="chatsSection">
+        <div class="chatHeader">
+            <h2>Chats</h2>
+            <div>
+                <img src="../static/img/search.png"/>
+                <input placeholder="Search" type="text" id="chatSearch"/>
+            </div>
+            <a href="/add_chat_page">Add Chat</a>
+        </div>
+        <div class="chatsBox">
+            <ul id="chatsList">
+            </ul>
+        </div>
+        <div class="messagesBox" id="messagesBox">
+                <div class="messagesHeader">
+                    <h3 id="messagesHeaderName"></h3>
+                    <button id="messageCloseButton">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="messagesContent" id="messagesContent">
+                    <ul id="messagesUl"></ul>
+                </div>
+                <div class="messagesFooter">
+                    <input type="text" id="messageInput" placeholder="Type a message"/>
+                    <button id="messageSend">Send</button>
+                </div>
+            </div>
+    </section>
+<script src="../static/js/chatsGetter.js"></script>
+
+{% endblock %}

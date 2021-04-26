@@ -1,0 +1,62 @@
+main {
+  position: relative;
+  display: grid;
+  grid-template-areas: "nav chatsBlock";
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 20px;
+  grid-template-rows: 1fr;
+}
+main section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+main section .info-wrapper {
+  display: grid;
+  width: 100%;
+  max-width: 700px;
+  grid-template-areas: "image info";
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 20px;
+}
+main section .info-wrapper .imageBox {
+  margin: auto 10px;
+  grid-area: image;
+}
+main section .info-wrapper .imageBox span {
+  display: flex;
+  font-size: 300%;
+  width: 200px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+main section .info-wrapper .info-block {
+  grid-area: info;
+}
+main section .info-wrapper .info-block h3 {
+  margin: 20px 0 5px 0;
+  color: #999 !important;
+}
+main section .info-wrapper .info-block p {
+  margin: 0;
+  background: #222;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+@media all and (max-width: 900px) {
+  .info-wrapper {
+    grid-template-areas: "image" "info" !important;
+    grid-template-columns: 1fr !important;
+    max-width: 400px !important;
+  }
+  .info-wrapper .imageBox {
+    margin: 10px auto !important;
+  }
+}
+
+/*# sourceMappingURL=profile-style.css.map */
